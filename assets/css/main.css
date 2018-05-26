@@ -157,14 +157,14 @@
 	}
 
 	#wrapper {
-		 -moz-animation: wrapper 0.05s forwards; 
-	         -webkit-animation: wrapper 0.05s forwards; 
-		 -ms-animation: wrapper 0.05s forwards; 
-		 animation: wrapper 0.05s forwards; 
+		/* -moz-animation: wrapper 0.05s forwards; */
+		/* -webkit-animation: wrapper 0.05s forwards; */
+		/* -ms-animation: wrapper 0.05s forwards; */
+		/* animation: wrapper 0.05s forwards; */
 		height: 100%;
 		left: 0;
-		opacity: 0; 
-	      /*  opacity: 1;*/
+		/* opacity: 0; */
+		opacity: 1;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -173,10 +173,10 @@
 /* BG */
 
 	#bg {
-		 -moz-animation: bg 60s linear infinite; 
-		 -webkit-animation: bg 60s linear infinite; 
-		 -ms-animation: bg 60s linear infinite; 
-		 animation: bg 60s linear infinite; 
+		/* -moz-animation: bg 60s linear infinite; */
+		/* -webkit-animation: bg 60s linear infinite; */
+		/* -ms-animation: bg 60s linear infinite; */
+		/* animation: bg 60s linear infinite; */
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -308,10 +308,10 @@
 	}
 
 	#overlay {
-		 -moz-animation: overlay 0.1s 0.1s forwards; 
-	         -webkit-animation: overlay 0.1s 0.1s forwards; 
-		 -ms-animation: overlay 0.1s 0.1s forwards; 
-		 animation: overlay 0.1s 0.1s forwards; 
+		/* -moz-animation: overlay 0.1s 0.1s forwards; */
+		/* -webkit-animation: overlay 0.1s 0.1s forwards; */
+		/* -ms-animation: overlay 0.1s 0.1s forwards; */
+		/* animation: overlay 0.1s 0.1s forwards; */
 		background-attachment: fixed, fixed;
 		background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
 		background-position: top left, center center;
@@ -319,8 +319,8 @@
 		background-size: auto, cover;
 		height: 100%;
 		left: 0;
-		opacity: 0; 
-		/*opacity: 1;*/
+		/* opacity: 0; */
+		opacity: 1;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -493,10 +493,10 @@
 	}
 
 	#header {
-		 -moz-animation: header 1s 0.1s forwards; 
-		 -webkit-animation: header 1s 0.1s forwards; 
-		 -ms-animation: header 1s 0.1s forwards; 
-		 animation: header 1s 0.1s forwards;
+		/* -moz-animation: header 1s 0.1s forwards; */
+		/* -webkit-animation: header 1s 0.1s forwards; */
+		/* -ms-animation: header 1s 0.1s forwards; */
+		/* animation: header 1s 0.1s forwards; */
 		-moz-backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
 		-ms-backface-visibility: hidden;
@@ -534,10 +534,10 @@
 		}
 
 			#header nav li {
-				 -moz-animation: nav-icons 0.1s ease-in-out forwards; 
-				 -webkit-animation: nav-icons 0.1s ease-in-out forwards; 
-				 -ms-animation: nav-icons 0.1s ease-in-out forwards; 
-				 animation: nav-icons 0.1s ease-in-out forwards; 
+				/* -moz-animation: nav-icons 0.1s ease-in-out forwards; */
+				/* -webkit-animation: nav-icons 0.1s ease-in-out forwards; */
+				/* -ms-animation: nav-icons 0.1s ease-in-out forwards; */
+				/* animation: nav-icons 0.1s ease-in-out forwards; */
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
 				-ms-backface-visibility: hidden;
@@ -614,12 +614,12 @@
 			}
 
 				#header nav a:before {
-					
+					/*
 					-moz-transition: all 0.2s ease-in-out;
 					-webkit-transition: all 0.2s ease-in-out;
 					-ms-transition: all 0.2s ease-in-out;
 					transition: all 0.2s ease-in-out;
-					
+					*/
 					border-radius: 100%;
 					border: solid 1px #fff;
 					display: block;
@@ -632,23 +632,23 @@
 					width: 2.5em;
 				}
 
-				
+				/*
 				#header nav a:hover {
 					font-size: 1.1em;
 				}
-			
+				*/
 
 					#header nav a:hover:before {
 						background-color: rgba(255, 255, 255, 0.175);
 						color: #fff;
 					}
 
-		
+				/*
 				#header nav a:active {
 					font-size: 0.95em;
 					background: none;
 				}
-			
+				*/
 
 					#header nav a:active:before {
 						background-color: rgba(255, 255, 255, 0.35);
