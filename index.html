@@ -1,57 +1,127 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>FSinfo Passau - Landing</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <link rel="icon" href="favicon.ico">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>FSinfo Passau</h1>
-						<p>Fachschaftsvertretung der Fakultät für Informatik und Mathematik</p>
-						<nav>
-							<ul>
-								<li><a href="https://fsinfo.fim.uni-passau.de" class="fas fa-home"><span class="label">Homepage</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/redmine" class="fas fa-gem"><span class="label">Redmine</span></a></li>
-								<li><a href="https://bitbucket.org/fsinfo/" class="fas fa-code-branch"><span class="label">Git</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/nextcloud" class="fas fa-cloud"><span class="label">Nextcloud</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/addressbook" class="fas fa-address-book"><span class="label">Adressbuch</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/buero" class="fas fa-door-open"><span class="label">Doorlock sensor</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/klausiweb" class="fas fa-graduation-cap"><span class="label">KlausiWeb</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/mailman/listinfo" class="fas fa-envelope"><span class="label">Mailman</span></a></li>
-								<li><a href="https://fsinfo.uni-passau.de/admin" class="fas fa-link"><span class="label">YOURLS</span></a></li>
-								<li><a href="https://fsinfo.fim.uni-passau.de/fsp/template" class="fas fa-align-left"><span class="label">FSP-Template</span></a></li>
-							</ul>
-						</nav>
-					</header>
+        <title>FSinfo: Interne Dienste</title>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; FSinfo. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
 
-			</div>
-		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+    <body>
+
+        <div class="container">
+            <header>
+                <img src="assets/img/logo_fsinfo_pathed_white.svg" id="logo" alt="FSinfo-Logo" />
+            </header>
+
+            <nav>
+                <h1>FSinfo: Interne Dienste</h1>
+                <h3>Fachschaft</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de">
+                            <span class="fas fa-li fa-home"><!-- icon --></span>
+                            <span class="label">Homepage</span><br />
+                            <span class="description">Öffentlicher Webauftritt</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/redmine">
+                            <span class="fas fa-li fa-gem"><!-- icon --></span>
+                            <span class="label">Redmine</span><br />
+                            <span class="description">Informationssammlung (Wiki) und Aufgabenverteilung</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bitbucket.org/fsinfo/">
+                            <span class="fas fa-li fa-code-branch"><!-- icon --></span>
+                            <span class="label">Git (Bitbucket)</span><br />
+                            <span class="description">Versionverwaltung für Programme, Dokumente und Präsentationen</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/nextcloud">
+                            <span class="fas fa-li fa-cloud"><!-- icon --></span>
+                            <span class="label">Nextcloud</span><br />
+                            <span class="description">Ablage und Archiv für größere Dateien, Live-Zusammenarbeit</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/addressbook">
+                            <span class="fas fa-li fa-address-book"><!-- icon --></span>
+                            <span class="label">Adressbuch</span><br />
+                            <span class="description">Mitgliederliste, Änderungen des eigenen Profils und Passworts</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/mailman/listinfo">
+                            <span class="fas fa-li fa-envelope"><!-- icon --></span>
+                            <span class="label">Mailman</span><br />
+                            <span class="description">Archiv der Mailinglisten</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/buero">
+                            <span class="fas fa-li fa-door-open"><!-- icon --></span>
+                            <span class="label">Türsensor</span><br />
+                            <span class="description">Aktueller Sperrzustand der Bürotür</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Klausuren-Team</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/klausiweb">
+                            <span class="fas fa-li fa-graduation-cap"><!-- icon --></span>
+                            <span class="label">KlausiWeb</span><br />
+                            <span class="description">Verwaltung und Versand von Klausurprotokollen</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Social-Team</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/typo3/">
+                            <span class="fas fa-li fa-pen"><!-- icon --></span>
+                            <span class="label">Typo3</span><br />
+                            <span class="description">Website-Backend</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.uni-passau.de/admin">
+                            <span class="fas fa-li fa-link"><!-- icon --></span>
+                            <span class="label">YOURLS</span><br />
+                            <span class="description">Kurz-URLs unter fsinfo.uni-passau.de</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Admins</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/mailman/admin">
+                            <span class="fas fa-li fa-envelope-square"><!-- icon --></span>
+                            <span class="label">Mailman-Adminoberfläche</span><br />
+                            <span class="description">Verwaltung der Mailinglisten</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://fsinfo.fim.uni-passau.de/phpldapadmin/">
+                            <span class="fas fa-li fa-toolbox"><!-- icon --></span>
+                            <span class="label">phpLDAPadmin</span><br />
+                            <span class="description">Direkte Bearbeitung der LDAP-Datenbank</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div> <!-- /container -->
+    </body>
 </html>
