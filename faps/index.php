@@ -8,14 +8,14 @@
 
         <title>FSinfo: Aktivitätspunkte</title>
 
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
     </head>
 
     <body>
 
         <div class="container">
             <header>
-                <img src="assets/img/logo_fsinfo_pathed_white.svg" id="logo" alt="FSinfo-Logo" />
+                <img src="../assets/img/logo_fsinfo_pathed_white.svg" id="logo" alt="FSinfo-Logo" />
             </header>
 
             <nav>
