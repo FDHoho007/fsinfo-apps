@@ -47,10 +47,34 @@ nav ul li {
     margin: 1.75ex 0ex;
 }
 
+nav ul li ul {
+    padding-left: 2.5ex;
+    list-style-type: none; /* custom bullet defined below */
+}
+
+nav ul li ul li::before {
+    color: #00206D; /* #00206D = FSinfo dark */
+    content: "\2023";
+    font-style: normal;
+    display: inline-block;
+    width: 1em;
+    margin-left: -2.5ex;
+}
+
+nav ul li ul li {
+    margin: 0.25ex 0ex;
+    font-size: 90%;
+    font-style: italic;
+}
+
 nav ul li .label {
     font-weight: bold;
 }
 
 nav ul li .description {
     font-size: 90%;
+}
+
+nav ul li .sublist-heading {
+    font-weight: bolder;
 }
