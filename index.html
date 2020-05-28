@@ -9,6 +9,34 @@
         <title>FSinfo: Interne Dienste</title>
 
         <link rel="stylesheet" href="assets/css/main.css" />
+
+        <script>
+          var bbbRooms = ["videochat","sitzungsraum","videostammtisch","videotest"]
+          function updateBBBroomState(fsinfoShortUrl) {
+            const Http = new XMLHttpRequest();
+            const url = '/apps/bbb-status.php?room=' + fsinfoShortUrl
+            Http.open("GET", url);
+            Http.send();
+
+            Http.onreadystatechange=(e) => {
+              var match = Http.responseText;
+
+              // I don't know why the api sometimes return the german version.
+              if (match == 'Start' || match == 'Starten') {
+                document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room closed <span class="fas fa-power-off"/>';
+              } else if (match == 'Join' || match == 'Teilnehmen') {
+                document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room running <span class="fas fa-thumbs-up"/>';
+              }
+            }
+          }
+
+
+          document.addEventListener("DOMContentLoaded", function() {
+            for (var i = 0; i < bbbRooms.length; i++) {
+              updateBBBroomState(bbbRooms[i])
+            }
+          })
+        </script>
     </head>
 
     <body>
@@ -91,10 +119,10 @@
                         </a>
                         <br />
                         <ul>
-                            <li><a href="https://fsinfo.uni-passau.de/videochat">Öffentlicher Raum für Sprechstunden</a></li>
-                            <li><a href="https://fsinfo.uni-passau.de/sitzungsraum">Sitzungsraum</a></li>
-                            <li><a href="https://fsinfo.uni-passau.de/videostammtisch">Stammtisch</a></li>
-                            <li><a href="https://fsinfo.uni-passau.de/videotest">Öffentlicher Testraum</a></li>
+                            <li><a href="https://fsinfo.uni-passau.de/videochat">Öffentlicher Raum für Sprechstunden</a> - <span id='bbb-videochat'></span></li>
+                            <li><a href="https://fsinfo.uni-passau.de/sitzungsraum">Sitzungsraum</a> - <span id='bbb-sitzungsraum'></span></li>
+                            <li><a href="https://fsinfo.uni-passau.de/videostammtisch">Stammtisch</a> - <span id='bbb-videostammtisch'></span></li>
+                            <li><a href="https://fsinfo.uni-passau.de/videotest">Öffentlicher Testraum</a> - <span id='bbb-videotest'></span></li>
                         </ul>
                     </li>
                     <li>
