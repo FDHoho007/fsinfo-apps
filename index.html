@@ -11,8 +11,9 @@
         <link rel="stylesheet" href="assets/css/main.css" />
 
         <script>
+          var bbbRoomStates = new Map();
           var bbbRooms = ["videochat","sitzungsraum","videostammtisch","videotest"]
-          function updateBBBroomState(fsinfoShortUrl) {
+          function loadBBBroomState(fsinfoShortUrl) {
             const Http = new XMLHttpRequest();
             const url = '/apps/bbb-status.php?room=' + fsinfoShortUrl
             Http.open("GET", url);
@@ -20,22 +21,62 @@
 
             Http.onreadystatechange=(e) => {
               var match = Http.responseText;
+              var roomRunning;
 
               // I don't know why the api sometimes return the german version.
               if (match == 'Start' || match == 'Starten') {
-                document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room closed <span class="fas fa-power-off"/>';
+                roomRunning = false;
               } else if (match == 'Join' || match == 'Teilnehmen') {
+                roomRunning = true;
+              } else {
+                return;
+              }
+
+              if (roomRunning) {
                 document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room running <span class="fas fa-thumbs-up"/>';
+              } else {
+                document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room closed <span class="fas fa-power-off"/>';
+              }
+
+
+              if (bbbRoomStates.has(fsinfoShortUrl) && bbbRoomStates.get(fsinfoShortUrl) != roomRunning) {
+                if(roomRunning) {
+                  showNotification("The FSinfo BBB room " + fsinfoShortUrl + " is now running!")
+                }
+              }
+              bbbRoomStates.set(fsinfoShortUrl, roomRunning);
+            }
+          }
+
+          function showNotification(message) {
+            if(window.Notification) {
+              // check if permission is already granted
+              if (Notification.permission === 'granted') {
+                var notification = new Notification(message);
+              } else {
+                // request permission from user
+                Notification.requestPermission().then(function(p) {
+                  if(p === 'granted') {
+                    var notification = new Notification(message);
+                  }
+                }).catch(function(err) {
+                  console.error(err);
+                });
               }
             }
           }
 
+          function updateBBBroomStates() {
+            for (var i = 0; i < bbbRooms.length; i++) {
+              loadBBBroomState(bbbRooms[i])
+            }
+          }
 
           document.addEventListener("DOMContentLoaded", function() {
-            for (var i = 0; i < bbbRooms.length; i++) {
-              updateBBBroomState(bbbRooms[i])
-            }
+            updateBBBroomStates();
+            window.setInterval(updateBBBroomStates, 30000);
           })
+
         </script>
     </head>
 
