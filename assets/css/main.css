@@ -73,14 +73,10 @@ nav ul li .sublist-heading {
     font-weight: bolder;
 }
 
-#maintenance {
-    display: block;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
 #maintenance.on {
+    font-weight: bold;
     color: red;
     border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
 }
