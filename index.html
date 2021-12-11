@@ -75,6 +75,17 @@
           document.addEventListener("DOMContentLoaded", function() {
             updateBBBroomStates();
             window.setInterval(updateBBBroomStates, 30000);
+	    window.setInterval(function() {
+		let e = document.getElementById("maintenance");
+		let date = new Date();
+		if(date.getDay() == 6 && date.getHours() >= 13 && date.getHours() <= 17) {
+			if(!e.classList.contains("on"))
+				e.classList.add("on");
+		} else {
+			if(e.classList.contains("on"))
+				e.classList.remove("on");
+		}
+	    }, 60*1000);
           })
 
         </script>
@@ -89,6 +100,7 @@
 
             <nav>
                 <h1>FSinfo: Interne Dienste</h1>
+		<b id="maintenance">Samstags zwischen 13:00 - 17:00 Uhr finden planmäßige Wartungsarbeiten an unseren Diensten statt. Daher sind diese möglicherweise nicht erreichbar. </b>
                 <h3>Fachschaft</h3>
                 <ul class="fa-ul">
                     <li>
