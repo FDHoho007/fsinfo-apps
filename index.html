@@ -12,7 +12,7 @@
 
         <script>
           var bbbRoomStates = new Map();
-          var bbbRooms = ["videochat","sitzungsraum","videostammtisch","videotest"]
+          var bbbRooms = ["videostammtisch","videotest"]
           function loadBBBroomState(fsinfoShortUrl) {
             const Http = new XMLHttpRequest();
             const url = '/apps/bbb-status.php?room=' + fsinfoShortUrl
@@ -49,20 +49,8 @@
           }
 
           function showNotification(message) {
-            if(window.Notification) {
-              // check if permission is already granted
-              if (Notification.permission === 'granted') {
-                var notification = new Notification(message);
-              } else {
-                // request permission from user
-                Notification.requestPermission().then(function(p) {
-                  if(p === 'granted') {
-                    var notification = new Notification(message);
-                  }
-                }).catch(function(err) {
-                  console.error(err);
-                });
-              }
+            if(window.Notification && Notification.permission === 'granted') {
+              var notification = new Notification(message);
             }
           }
 
@@ -73,8 +61,12 @@
           }
 
           document.addEventListener("DOMContentLoaded", function() {
+            Notification.requestPermission().then(function(p) {
+            }).catch(function(err) {
+               console.error(err);
+            });
             updateBBBroomStates();
-            window.setInterval(updateBBBroomStates, 30000);
+            window.setInterval(updateBBBroomStates, 120000);
 	    window.setInterval(function() {
 		let e = document.getElementById("maintenance");
 		let date = new Date();
