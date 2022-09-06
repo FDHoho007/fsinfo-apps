@@ -85,13 +85,17 @@ function buildLinks(links) {
     }
 }
 
-clearLinks();
-buildCategories();
-setTimeout(() => {
-    for(let ul of document.querySelectorAll(".link-category ul"))
-        ul.style.maxHeight = ul.scrollHeight + "px";
-}, 500);
+if(location.pathname === "/") {
+    clearLinks();
+    buildCategories();
+    setTimeout(() => {
+        for (let ul of document.querySelectorAll(".link-category ul"))
+            ul.style.maxHeight = ul.scrollHeight + "px";
+    }, 500);
 
-fetch("links.json").then(r => r.json()).then(links => {
-    buildLinks(links);
-});
+    fetch("links.json").then(r => r.json()).then(links => {
+        buildLinks(links);
+    });
+}
+else
+    location.href = "https://fsinfo.fim.uni-passau.de" + location.pathname;
