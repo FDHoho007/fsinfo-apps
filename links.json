@@ -1,0 +1,175 @@
+{
+  "general": [
+    {
+      "id": "home",
+      "title": "Homepage",
+      "icon": "house",
+      "description": "Öffentlicher Webauftritt",
+      "url": "https://fsinfo.fim.uni-passau.de/"
+    },
+    {
+      "id": "redmine",
+      "title": "Redmine",
+      "icon": "gem",
+      "description": "Informationssammlung (Wiki) und Aufgabenverteilung",
+      "url": "https://fsinfo.fim.uni-passau.de/redmine"
+    },
+    {
+      "id": "git",
+      "title": "Git",
+      "icon": "git",
+      "description": "Versionverwaltung für Programme, Dokumente und Präsentationen",
+      "url": "https://fsinfo.fim.uni-passau.de/git/"
+    },
+    {
+      "id": "nextcloud",
+      "title": "Nextcloud",
+      "icon": "cloud",
+      "description": "Ablage und Archiv für größere Dateien, Live-Zusammenarbeit",
+      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/"
+    },
+    {
+      "id": "calendar",
+      "title": "Kalender",
+      "icon": "calendar",
+      "description": "Eintragen und Ansehen interner und studiumsrelevanter Termine",
+      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/index.php/apps/calendar"
+    },
+    {
+      "id": "address-book",
+      "title": "Adressbuch",
+      "icon": "people",
+      "description": "Mitgliederliste, Änderungen des eigenen Profils und Passworts",
+      "url": "https://fsinfo.fim.uni-passau.de/addressbook/"
+    },
+    {
+      "id": "mailman",
+      "title": "Mailman",
+      "icon": "envelope",
+      "description": "Archiv der Mailinglisten",
+      "url": "https://fsinfo.fim.uni-passau.de/mailman/listinfo"
+    },
+    {
+      "id": "door",
+      "title": "Türsensor",
+      "icon": "door-open",
+      "description": "Aktueller Sperrzustand der Bürotür",
+      "url": "https://fsinfo.fim.uni-passau.de/buero"
+    },
+    {
+      "id": "sign-generator",
+      "title": "Schildgenerator",
+      "icon": "signpost-2",
+      "description": "Schnell Schilder im FSinfo-Design erstellen",
+      "url": "https://fsinfo.fim.uni-passau.de/schildergenerator/fsinfopassau"
+    },
+    {
+      "id": "klausibrowser",
+      "title": "Klausurprotokoll-Browser",
+      "icon": "mortarboard",
+      "description": "FS-intern Klausurprotokolle erstellen und herunterladen",
+      "url": "https://fsinfo.fim.uni-passau.de/klausibrowser/"
+    }
+  ],
+  "protokoll": [
+    {
+      "id": "fsp-template",
+      "title": "Protokolltemplate",
+      "icon": "text-left",
+      "description": "Template-Generator für Sitzungs-Protokolle",
+      "url": "https://fsinfo.fim.uni-passau.de/fsp/template"
+    },
+    {
+      "id": "fsp",
+      "title": "Protokolltool",
+      "icon": "check2-all",
+      "description": "Tool zur Freigabe/Veröffentlichung von Sitzungsprotokollen",
+      "url": "https://fsinfo.fim.uni-passau.de/fsp/"
+    }
+  ],
+  "klausuren": [
+    {
+      "id": "klausiweb",
+      "title": "KlausiWeb",
+      "icon": "mortarboard",
+      "description": "Verwaltung und Versand von Klausurprotokollen",
+      "url": "https://fsinfo.fim.uni-passau.de/klausiweb/"
+    }
+  ],
+  "social": [
+    {
+      "id": "typo3",
+      "title": "Typo3",
+      "icon": "pencil",
+      "description": "Website-Backend",
+      "url": "https://fsinfo.fim.uni-passau.de/typo3/"
+    },
+    {
+      "id": "yourls",
+      "title": "YOURLS",
+      "icon": "link-45deg",
+      "description": "Kurz-URLs unter fsinfo.uni-passau.de",
+      "url": "https://fsinfo.uni-passau.de/admin"
+    },
+    {
+      "id": "social-trello",
+      "title": "Social Trello",
+      "icon": "kanban",
+      "description": "Aufgabenverwaltung (To-dos)",
+      "url": "https://trello.com/b/98K51HiG/social-media"
+    }
+  ],
+  "admins": [
+    {
+      "id": "mailman-admin",
+      "title": "Mailman-Adminoberfläche",
+      "icon": "envelope",
+      "description": "Verwaltung der Mailinglisten",
+      "url": "https://fsinfo.fim.uni-passau.de/mailman/admin"
+    },
+    {
+      "id": "ldap",
+      "title": "phpLDAPadmin",
+      "icon": "briefcase",
+      "description": "Direkte Bearbeitung der LDAP-Datenbank",
+      "url": "https://fsinfo.fim.uni-passau.de/phpldapadmin/"
+    },
+    {
+      "id": "mysql",
+      "title": "phpMyAdmin",
+      "icon": "hdd-rack",
+      "description": "Direkte Bearbeitung der MySQL-Datenbank",
+      "url": "https://fsinfo.fim.uni-passau.de/phpmyadmin/"
+    },
+    {
+      "id": "admin-trello",
+      "title": "Admins Trello",
+      "icon": "kanban",
+      "description": "Aufgabenverwaltung (To-dos)",
+      "url": "https://trello.com/b/218dFedl/fsinfo-admins"
+    },
+    {
+      "id": "yourls",
+      "title": "YOURLS",
+      "icon": "link-45deg",
+      "description": "Kurz-URLs unter fsinfo.uni-passau.de",
+      "url": "https://fsinfo.uni-passau.de/admin"
+    }
+  ],
+  "custom": [
+    {
+      "id": "meme-generator",
+      "title": "Meme Generator",
+      "icon": "image",
+      "description": "von Julian Harrer",
+      "url": "https://fsmemes.pages.dev/"
+    },
+    {
+      "id": "soundboard",
+      "title": "Soundboard",
+      "icon": "volume-up",
+      "description": "von Julian Harrer",
+      "url": "https://soundboard-web.pages.dev/"
+    }
+  ]
+}
