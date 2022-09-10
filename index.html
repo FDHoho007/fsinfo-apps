@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="dark-mode">
+<html lang="de">
 
 <head>
 
@@ -12,21 +12,21 @@
     <link rel="icon" href="https://fsinfo.fim.uni-passau.de/apps/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/js/settings.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/maintenance.js" defer></script>
     <script src="assets/js/door-status.js" defer></script>
 
 </head>
 
-<body>
+<body class="theme-dark">
 
-<a id="settings-button"><i class="bi bi-gear-fill"></i></a>
+<a id="settings-button" onclick="openSettings()"><i class="bi bi-gear-fill"></i></a>
 
 <header>
     <img id="logo" src="https://fsinfo.fim.uni-passau.de/fileadmin/template/images/logo.svg" alt="Logo">
     <i id="door-status" class="bi"></i>
 </header>
-
-<!-- Settings -->
 
 <div id="maintenance">
     Samstags zwischen 13:00 - 17:00 Uhr finden planmäßige Wartungsarbeiten an unseren Diensten statt.
@@ -34,6 +34,19 @@
 </div>
 
 <ul id="links"></ul>
+
+<div id="settings-overlay" class="hidden" style="display: none">
+    <div id="settings">
+        <a style="float: right" onclick="closeSettings()">&#10005;</a>
+        <h1>Einstellungen</h1>
+        <label for="settings-theme">Theme:</label> <select id="settings-theme"><option value="dark">Dark</option><option value="light">Light (u sure?)</option></select> <button onclick="saveTheme()">Speichern</button><br>
+        <br>
+        <label for="settings-disabled-apps">Folgende Apps aus der Liste ausblenden:</label><br>
+        <ul id="settings-disabled-apps"></ul><br>
+        <br>
+        <button onclick="saveDisabledApps()">Speichern</button>
+    </div>
+</div>
 
 </body>
 

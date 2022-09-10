@@ -1,20 +1,20 @@
 /* Theme */
 
-html {
+body {
     --background: #fff;
     --background-button: lightgrey;
     --color-primary: #000;
     --color-highlight: #000;
 }
 
-html.dark-mode {
+body.theme-dark {
     --background: #161b22;
     --background-button: #090c10;
     --color-primary: #b1b8c0;
     --color-highlight: #fff;
 }
 
-html:not(.dark-mode) #logo {
+body:not(.theme-dark) #logo {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
@@ -34,7 +34,6 @@ body {
 
 ul {
     list-style: none;
-    padding: 0;
 }
 
 a {
@@ -85,6 +84,44 @@ header {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+#settings-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease-in-out;
+}
+
+#settings {
+    width: 50%;
+    text-align: center;
+    background: var(--background-button);
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 0 black;
+    position: relative;
+    top: 150px;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#settings-overlay.hidden {
+    background-color: transparent;
+}
+
+#settings-overlay.hidden #settings {
+    top: 0;
+    opacity: 0;
+}
+
+#settings > ul {
+    text-align: start;
+    width: 50%;
+    margin: auto;
 }
 
 /* Links */
@@ -155,13 +192,16 @@ header {
     #logo {
         width: 200px;
     }
+
     #door-status {
         font-size: 60px;
         margin-left: 25px;
     }
+
     #maintenance {
         max-width: 250px;
     }
+
     #links {
         width: 80%;
     }
