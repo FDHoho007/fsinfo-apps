@@ -25,10 +25,10 @@ function getTheme() {
 }
 
 function loadTheme() {
-    if (getTheme() === "dark")
-        document.body.classList.add("theme-dark");
-    else
+    if (getTheme() === "light")
         document.body.classList.remove("theme-dark");
+    else
+        document.body.classList.add("theme-dark");
 }
 
 loadTheme();
