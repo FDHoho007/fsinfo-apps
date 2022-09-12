@@ -41,14 +41,14 @@ function buildCategories() {
         li.appendChild(a);
         let ul = document.createElement("ul");
         ul.id = category.id;
-        ul.style.maxHeight = "100000px";
+        ul.style.maxHeight = "3000px";
         li.appendChild(ul);
         a.onclick = () => {
             if (ul.style.maxHeight) {
                 ul.style.maxHeight = null;
                 a.classList.add("collapsed");
             } else {
-                ul.style.maxHeight = "100000px";
+                ul.style.maxHeight = "3000px";
                 a.classList.remove("collapsed");
             }
         };
