@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <link rel="icon" href="favicon.ico">
 
         <title>FSinfo: Interne Dienste</title>
@@ -11,54 +11,6 @@
         <link rel="stylesheet" href="assets/css/main.css" />
 
         <script>
-          var bbbRoomStates = new Map();
-          var bbbRooms = ["videostammtisch","videotest"]
-          function loadBBBroomState(fsinfoShortUrl) {
-            const Http = new XMLHttpRequest();
-            const url = '/apps/bbb-status.php?room=' + fsinfoShortUrl
-            Http.open("GET", url);
-            Http.send();
-
-            Http.onreadystatechange=(e) => {
-              var match = Http.responseText;
-              var roomRunning;
-
-              // I don't know why the api sometimes return the german version.
-              if (match == 'Start' || match == 'Starten') {
-                roomRunning = false;
-              } else if (match == 'Join' || match == 'Teilnehmen') {
-                roomRunning = true;
-              } else {
-                return;
-              }
-
-              if (roomRunning) {
-                document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room running <span class="fas fa-thumbs-up"/>';
-              } else {
-                document.getElementById("bbb-" + fsinfoShortUrl).innerHTML=' - Room closed <span class="fas fa-power-off"/>';
-              }
-
-
-              if (bbbRoomStates.has(fsinfoShortUrl) && bbbRoomStates.get(fsinfoShortUrl) != roomRunning) {
-                if(roomRunning) {
-                  showNotification("The FSinfo BBB room " + fsinfoShortUrl + " is now running!")
-                }
-              }
-              bbbRoomStates.set(fsinfoShortUrl, roomRunning);
-            }
-          }
-
-          function showNotification(message) {
-            if(window.Notification && Notification.permission === 'granted') {
-              var notification = new Notification(message);
-            }
-          }
-
-          function updateBBBroomStates() {
-            for (var i = 0; i < bbbRooms.length; i++) {
-              loadBBBroomState(bbbRooms[i])
-            }
-          }
 
 	  function updateMaintenanceStatus() {
 		let e = document.getElementById("maintenance");
@@ -73,12 +25,6 @@
 	  }
 
           document.addEventListener("DOMContentLoaded", function() {
-            Notification.requestPermission().then(function(p) {
-            }).catch(function(err) {
-               console.error(err);
-            });
-            updateBBBroomStates();
-            window.setInterval(updateBBBroomStates, 120000);
 	    updateMaintenanceStatus();
 	    window.setInterval(updateMaintenanceStatus, 60*1000);
           })
@@ -156,22 +102,6 @@
                             <span class="description">Mitgliederliste, Änderungen des eigenen Profils und Passworts</span>
 
                         </a>
-                    </li>
-                    <li>
-
-                        <a href="/redmine/projects/fsinfo/wiki/Videochats">
-                            <span class="fas fa-li fa-video"><!-- icon --></span>
-                            <span class="label">Videochat-Räume</span><br />
-                            <span class="description">Räume für virtuelle Sitzungen, Sprechstunden etc.</span>
-
-                        </a>
-                        <br />
-                        <ul>
-                            <li><a href="https://fsinfo.uni-passau.de/videochat">Öffentlicher Raum für Sprechstunden</a><span id='bbb-videochat'></span></li>
-                            <li><a href="https://fsinfo.uni-passau.de/sitzungsraum">Sitzungsraum</a><span id='bbb-sitzungsraum'></span></li>
-                            <li><a href="https://fsinfo.uni-passau.de/videostammtisch">Stammtisch</a><span id='bbb-videostammtisch'></span></li>
-                            <li><a href="https://fsinfo.uni-passau.de/videotest">Öffentlicher Testraum</a><span id='bbb-videotest'></span></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="https://mattermost.fim.uni-passau.de/signup_user_complete/?id=acssj71xtj8obdj4gcf11xoxqc">
@@ -273,13 +203,6 @@
                             <span class="fas fa-li fa-envelope-square"><!-- icon --></span>
                             <span class="label">Mailman-Adminoberfläche</span><br />
                             <span class="description">Verwaltung der Mailinglisten</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/phpldapadmin/">
-                            <span class="fas fa-li fa-toolbox"><!-- icon --></span>
-                            <span class="label">phpLDAPadmin</span><br />
-                            <span class="description">Direkte Bearbeitung der LDAP-Datenbank</span>
                         </a>
                     </li>
                     <li>
