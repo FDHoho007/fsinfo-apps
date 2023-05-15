@@ -22,6 +22,13 @@
       "url": "https://fsinfo.fim.uni-passau.de/git/"
     },
     {
+      "id": "fim-git",
+      "title": "FIM Git",
+      "icon": "git",
+      "description": "Versionverwaltung für Programme, Dokumente und Präsentationen",
+      "url": "https://git.fim.uni-passau.de/"
+    },
+    {
       "id": "nextcloud",
       "title": "Nextcloud",
       "icon": "cloud",
@@ -98,11 +105,11 @@
   ],
   "social": [
     {
-      "id": "typo3",
-      "title": "Typo3",
+      "id": "netlify",
+      "title": "Netlify",
       "icon": "pencil",
-      "description": "Website-Backend",
-      "url": "https://fsinfo.fim.uni-passau.de/typo3/"
+      "description": "Website anpassen",
+      "url": "https://fsinfo.fim.uni-passau.de/admin"
     },
     {
       "id": "yourls",
@@ -128,25 +135,11 @@
       "url": "https://fsinfo.fim.uni-passau.de/mailman/admin"
     },
     {
-      "id": "ldap",
-      "title": "phpLDAPadmin",
-      "icon": "briefcase",
-      "description": "Direkte Bearbeitung der LDAP-Datenbank",
-      "url": "https://fsinfo.fim.uni-passau.de/phpldapadmin/"
-    },
-    {
       "id": "mysql",
       "title": "phpMyAdmin",
       "icon": "hdd-rack",
       "description": "Direkte Bearbeitung der MySQL-Datenbank",
       "url": "https://fsinfo.fim.uni-passau.de/phpmyadmin/"
-    },
-    {
-      "id": "admin-trello",
-      "title": "Admins Trello",
-      "icon": "kanban",
-      "description": "Aufgabenverwaltung (To-dos)",
-      "url": "https://trello.com/b/218dFedl/fsinfo-admins"
     },
     {
       "id": "yourls",
