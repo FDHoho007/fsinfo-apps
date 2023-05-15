@@ -1,226 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <link rel="icon" href="favicon.ico">
+<html lang="de">
 
-        <title>FSinfo: Interne Dienste</title>
+<head>
 
-        <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <title>FSinfo Apps</title>
+    <meta name="author" content="Fabian Dietrich">
+    <meta name="description"
+          content="Hier findest du Verknüpfungen zu allen Diensten der Fachschaft für Informatik und Mathematik Passau">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://fsinfo.fim.uni-passau.de/apps/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/js/settings.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/maintenance.js" defer></script>
+    <script src="assets/js/door-status.js" defer></script>
 
-        <script>
+</head>
 
-	  function updateMaintenanceStatus() {
-		let e = document.getElementById("maintenance");
-                let date = new Date();
-                if(date.getDay() == 6 && date.getHours() >= 13 && date.getHours() < 17) {
-                        if(!e.classList.contains("on"))
-                                e.classList.add("on");
-                } else {
-                        if(e.classList.contains("on"))
-                                e.classList.remove("on");
-                }
-	  }
+<body class="theme-dark">
 
-          document.addEventListener("DOMContentLoaded", function() {
-	    updateMaintenanceStatus();
-	    window.setInterval(updateMaintenanceStatus, 60*1000);
-          })
+<a id="settings-button" onclick="openSettings()"><i class="bi bi-gear-fill"></i></a>
 
-        </script>
-    </head>
+<header>
+    <img id="logo" src="https://fsinfo.fim.uni-passau.de/fileadmin/template/images/logo.svg" alt="Logo">
+    <i id="door-status" class="bi"></i>
+</header>
 
-    <body>
+<div id="maintenance">
+    Samstags zwischen 13:00 - 17:00 Uhr finden planmäßige Wartungsarbeiten an unseren Diensten statt.
+    Daher sind diese möglicherweise nicht erreichbar.
+</div>
 
-        <div class="container">
-            <header>
-                <img src="assets/img/logo_fsinfo_pathed_white.svg" id="logo" alt="FSinfo-Logo" />
-            </header>
+<ul id="links"></ul>
 
-            <nav>
-                <h1>FSinfo: Interne Dienste</h1>
-                <div id="maintenance">Samstags zwischen 13:00 - 17:00 Uhr finden planmäßige Wartungsarbeiten an unseren Diensten statt. Daher sind diese möglicherweise nicht erreichbar. </div>
-		<h3>Fachschaft</h3>
-                <ul class="fa-ul">
-                    <li>
-                        <a href="/">
-                            <span class="fas fa-li fa-home"><!-- icon --></span>
-                            <span class="label">Homepage</span><br />
-                            <span class="description">Öffentlicher Webauftritt</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/redmine">
-                            <span class="fas fa-li fa-gem"><!-- icon --></span>
-                            <span class="label">Redmine</span><br />
-                            <span class="description">Informationssammlung (Wiki) und Aufgabenverteilung</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/git/">
-                            <span class="fas fa-li fa-code-branch"><!-- icon --></span>
-                            <span class="label">Git</span><br />
-                            <span class="description">Versionverwaltung für Programme, Dokumente und Präsentationen</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/nextcloud/">
-                            <span class="fas fa-li fa-cloud"><!-- icon --></span>
-                            <span class="label">Nextcloud</span><br />
-                            <span class="description">Ablage und Archiv für größere Dateien, Live-Zusammenarbeit</span>
+<div id="settings-overlay" class="hidden" style="display: none">
+    <div id="settings">
+        <a style="float: right" onclick="closeSettings()">&#10005;</a>
+        <h1>Einstellungen</h1>
+        <label for="settings-theme">Theme:</label> <select id="settings-theme"><option value="dark">Dark</option><option value="light">Light (u sure?)</option></select> <button onclick="saveTheme()">Speichern</button><br>
+        <br>
+        <label for="settings-disabled-apps">Folgende Apps aus der Liste ausblenden:</label><br>
+        <ul id="settings-disabled-apps"></ul><br>
+        <br>
+        <button onclick="saveDisabledApps()">Speichern</button>
+    </div>
+</div>
 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/nextcloud/index.php/apps/calendar">
-                            <span class="fas fa-li fa-calendar-alt"><!-- icon --></span>
-                            <span class="label">Kalender</span><br />
-                            <span class="description">Eintragen und Ansehen interner und studiumsrelevanter Termine</span>
+</body>
 
-                        </a>
-                        <br />
-                        <span class="description sublist-heading">Direktlinks (.ics/ical) für euer Kalenderprogramm:</span>
-                        <ul>
-                            <li><a href="https://fsinfo.uni-passau.de/internal-events.ics">FS-interne Termine</a></li>
-                            <li><a href="https://fsinfo.uni-passau.de/events.ics">Fakultätsweite Termine (öffentlich)</a></li>
-                            <li><a href="https://fsinfo.uni-passau.de/owochenkalender.ics">O-Woche (öffentlich)</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://trello.com/b/k7IjcWoz/fsinfo">
-                            <span class="fab fa-li fa-trello"><!-- icon --></span>
-                            <span class="label">Trello</span><br />
-                            <span class="description">Aufgabenverwaltung (To-dos)</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/addressbook/">
-                            <span class="fas fa-li fa-address-book"><!-- icon --></span>
-                            <span class="label">Adressbuch</span><br />
-                            <span class="description">Mitgliederliste, Änderungen des eigenen Profils und Passworts</span>
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://mattermost.fim.uni-passau.de/signup_user_complete/?id=acssj71xtj8obdj4gcf11xoxqc">
-                            <span class="fab fa-li fa-slack-hash"><!-- icon --></span>
-                            <span class="label">Mattermost</span><br />
-                            <span class="description">Messenger für Teams und Direktnachrichten</span>
-                        </a>
-                        <br />
-                        <span class="description sublist-heading">Einladungslink — nicht außerhalb der FS weitergeben!</span>
-                    </li>
-                    <li>
-                        <a href="/mailman/listinfo">
-                            <span class="fas fa-li fa-envelope"><!-- icon --></span>
-                            <span class="label">Mailman</span><br />
-                            <span class="description">Archiv der Mailinglisten</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/buero">
-                            <span class="fas fa-li fa-door-open"><!-- icon --></span>
-                            <span class="label">Türsensor</span><br />
-                            <span class="description">Aktueller Sperrzustand der Bürotür</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/schildergenerator/fsinfopassau">
-                            <span class="fas fa-li fa-map-signs"><!-- icon --></span>
-                            <span class="label">Schildergenerator</span><br />
-                            <span class="description">Schnell Schilder im FSinfo-Design erstellen</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/klausibrowser/">
-                            <span class="fas fa-li fa-graduation-cap"><!-- icon --></span>
-                            <span class="label">Klausurprotokoll-Browser</span><br />
-                            <span class="description">FS-intern Klausurprotokolle erstellen und herunterladen</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <h3>Protokoll-Team</h3>
-                <ul class="fa-ul">
-                    <li>
-                        <a href="/fsp/template">
-                            <span class="fas fa-li fa-align-left"><!-- icon --></span>
-                            <span class="label">Protokolltemplate</span><br />
-                            <span class="description">Template-Generator für Sitzungs-Protokolle</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/fsp/">
-                            <span class="fas fa-li fa-check-double"><!-- icon --></span>
-                            <span class="label">Protokolltool</span><br />
-                            <span class="description">Tool zur Freigabe/Veröffentlichung von Sitzungsprotokollen</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <h3>Klausuren-Team</h3>
-                <ul class="fa-ul">
-                    <li>
-                        <a href="/klausiweb/">
-                            <span class="fas fa-li fa-graduation-cap"><!-- icon --></span>
-                            <span class="label">KlausiWeb</span><br />
-                            <span class="description">Verwaltung und Versand von Klausurprotokollen</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <h3>Social-Team</h3>
-                <ul class="fa-ul">
-                    <li>
-                        <a href="/typo3/">
-                            <span class="fas fa-li fa-pen"><!-- icon --></span>
-                            <span class="label">Typo3</span><br />
-                            <span class="description">Website-Backend</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://fsinfo.uni-passau.de/admin">
-                            <span class="fas fa-li fa-link"><!-- icon --></span>
-                            <span class="label">YOURLS</span><br />
-                            <span class="description">Kurz-URLs unter fsinfo.uni-passau.de</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://trello.com/b/98K51HiG/social-media">
-                            <span class="fab fa-li fa-trello"><!-- icon --></span>
-                            <span class="label">Trello</span><br />
-                            <span class="description">Aufgabenverwaltung (To-dos)</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <h3>Admins-Team</h3>
-                <ul class="fa-ul">
-                    <li>
-                        <a href="/mailman/admin">
-                            <span class="fas fa-li fa-envelope-square"><!-- icon --></span>
-                            <span class="label">Mailman-Adminoberfläche</span><br />
-                            <span class="description">Verwaltung der Mailinglisten</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/phpmyadmin/">
-                            <span class="fas fa-li fa-database"><!-- icon --></span>
-                            <span class="label">phpMyAdmin</span><br />
-                            <span class="description">Direkte Bearbeitung der MySQL-Datenbank</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://trello.com/b/218dFedl/fsinfo-admins">
-                            <span class="fab fa-li fa-trello"><!-- icon --></span>
-                            <span class="label">Trello</span><br />
-                            <span class="description">Aufgabenverwaltung (To-dos)</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div> <!-- /container -->
-    </body>
 </html>
