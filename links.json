@@ -54,7 +54,7 @@
       "title": "Mailman",
       "icon": "envelope",
       "description": "Archiv der Mailinglisten",
-      "url": "https://fsinfo.fim.uni-passau.de/mailman/listinfo"
+      "url": "https://fsinfo.fim.uni-passau.de/mailman3/hyperkitty/"
     },
     {
       "id": "door",
@@ -132,7 +132,7 @@
       "title": "Mailman-Adminoberfläche",
       "icon": "envelope",
       "description": "Verwaltung der Mailinglisten",
-      "url": "https://fsinfo.fim.uni-passau.de/mailman/admin"
+      "url": "https://fsinfo.fim.uni-passau.de/mailman3/"
     },
     {
       "id": "mysql",
