@@ -15,11 +15,11 @@
       "url": "https://fsinfo.fim.uni-passau.de/redmine"
     },
     {
-      "id": "git",
-      "title": "Git",
-      "icon": "git",
-      "description": "Versionverwaltung für Programme, Dokumente und Präsentationen",
-      "url": "https://fsinfo.fim.uni-passau.de/git/"
+      "id": "nextcloud",
+      "title": "Nextcloud",
+      "icon": "cloud",
+      "description": "Ablage und Archiv für größere Dateien, Live-Zusammenarbeit",
+      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/"
     },
     {
       "id": "fim-git",
@@ -29,11 +29,11 @@
       "url": "https://git.fim.uni-passau.de/"
     },
     {
-      "id": "nextcloud",
-      "title": "Nextcloud",
-      "icon": "cloud",
-      "description": "Ablage und Archiv für größere Dateien, Live-Zusammenarbeit",
-      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/"
+      "id": "git",
+      "title": "Git",
+      "icon": "git",
+      "description": "Versionverwaltung für Programme, Dokumente und Präsentationen",
+      "url": "https://fsinfo.fim.uni-passau.de/git/"
     },
     {
       "id": "calendar",
