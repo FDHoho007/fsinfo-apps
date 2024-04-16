@@ -50,6 +50,13 @@
       "url": "https://fsinfo.fim.uni-passau.de/addressbook/"
     },
     {
+      "id": "vaultwarden",
+      "title": "Vaultwarden",
+      "icon": "key",
+      "description": "Unser fachschaftsinterner Passwortmanager",
+      "url": "https://fsinfo.fim.uni-passau.de/vault"
+    },
+    {
       "id": "mailman",
       "title": "Mailman",
       "icon": "envelope",
