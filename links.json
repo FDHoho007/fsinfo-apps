@@ -57,6 +57,13 @@
       "url": "https://fsinfo.fim.uni-passau.de/vault"
     },
     {
+      "id": "prost",
+      "title": "PRoST",
+      "icon": "cup-straw",
+      "description": "Eine eigene overengineerte Kaffeekasse/KdV",
+      "url": "https://fsinfo.fim.uni-passau.de/prost"
+    },
+    {
       "id": "mailman",
       "title": "Mailman",
       "icon": "envelope",
