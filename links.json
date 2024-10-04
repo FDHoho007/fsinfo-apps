@@ -140,6 +140,15 @@
       "url": "https://trello.com/b/98K51HiG/social-media"
     }
   ],
+  "finance": [
+    {
+      "id": "ceus-lokal",
+      "title": "CEUS Lokal",
+      "icon": "bank",
+      "description": "Einsicht in die Kostenstelle",
+      "url": "https://lokal.ceus.uni-bamberg.de/unipas/asp/Main.aspx"
+    }
+  ],
   "admins": [
     {
       "id": "mailman-admin",

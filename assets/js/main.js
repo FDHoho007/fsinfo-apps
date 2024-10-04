@@ -18,6 +18,10 @@ const categories = [
         title: "Social-Team"
     },
     {
+        id: "finance",
+        title: "Finanz-Team"
+    },
+    {
         id: "admins",
         title: "Admins-Team"
     },
