@@ -37,9 +37,9 @@
     },
     {
       "id": "git",
-      "title": "Git",
+      "title": "Git (Legacay)",
       "icon": "git",
-      "description": "Versionverwaltung für Programme, Dokumente und Präsentationen",
+      "description": "FIM Git bevorzugt verwenden, sofern möglich",
       "url": "https://fsinfo.fim.uni-passau.de/git/"
     },
     {
