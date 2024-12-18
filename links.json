@@ -126,6 +126,13 @@
   ],
   "social": [
     {
+      "id": "penpot",
+      "title": "Penpot",
+      "icon": "easel3-fill",
+      "description": "Desgintool",
+      "url": "https://penpot.fsinfo.fim.uni-passau.de"
+    },
+    {
       "id": "netlify",
       "title": "Netlify",
       "icon": "pencil",
@@ -140,11 +147,11 @@
       "url": "https://fsinfo.uni-passau.de/admin"
     },
     {
-      "id": "social-trello",
-      "title": "Social Trello",
+      "id": "social-deck",
+      "title": "Social Deck",
       "icon": "kanban",
       "description": "Aufgabenverwaltung (To-dos)",
-      "url": "https://trello.com/b/98K51HiG/social-media"
+      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/index.php/apps/deck/board/8"
     }
   ],
   "finance": [
