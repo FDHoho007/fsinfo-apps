@@ -22,6 +22,13 @@
       "url": "https://fsinfo.fim.uni-passau.de/nextcloud/"
     },
     {
+      "id": "hedgedoc",
+      "title": "HedgeDoc",
+      "icon": "file-earmark-text",
+      "description": "Live-Zusammenarbeit in Markdown Dateien mit Live-Vorschau",
+      "url": "https://fsinfo.fim.uni-passau.de/hedgedoc/"
+    },
+    {
       "id": "fim-git",
       "title": "FIM Git",
       "icon": "git",
@@ -173,6 +180,20 @@
     }
   ],
   "custom": [
+    {
+      "id": "studienplan",
+      "title": "Studienplan",
+      "icon": "calendar3",
+      "description": "von Fabian Dietrich & Paul Seidel",
+      "url": "https://studienplan.fs-info.de/"
+    },
+    {
+      "id": "sitzungstool",
+      "title": "Sitzungstool",
+      "icon": "file-earmark-slides",
+      "description": "von Fabian Dietrich",
+      "url": "https://sitzungs.fs-info.de/"
+    },
     {
       "id": "meme-generator",
       "title": "Meme Generator",
