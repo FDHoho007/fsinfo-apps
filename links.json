@@ -37,7 +37,7 @@
     },
     {
       "id": "git",
-      "title": "Git (Legacay)",
+      "title": "Git (Legacy)",
       "icon": "git",
       "description": "FIM Git bevorzugt verwenden, sofern möglich",
       "url": "https://fsinfo.fim.uni-passau.de/git/"
