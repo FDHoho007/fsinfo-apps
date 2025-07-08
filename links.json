@@ -71,6 +71,13 @@
       "url": "https://fsinfo.fim.uni-passau.de/prost"
     },
     {
+      "id": "refund-form",
+      "title": "Rückerstattungsformular",
+      "icon": "cash-coin",
+      "description": "Hier kannst du dir Auslagen für die FSinfo zurückholen",
+      "url": "https://fsinfo.fim.uni-passau.de/finances/refund.php"
+    },
+    {
       "id": "mailman",
       "title": "Mailman",
       "icon": "envelope",
@@ -148,6 +155,20 @@
     }
   ],
   "finance": [
+    {
+      "id": "firefly",
+      "title": "Firefly III",
+      "icon": "bank",
+      "description": "Verwalten von Finanzen",
+      "url": "https://fsinfo.fim.uni-passau.de/firefly"
+    },
+    {
+      "id": "generate-request",
+      "title": "Antragsgenerator",
+      "icon": "file-earmark-text",
+      "description": "Generiere einen Rückerstattungsantrag",
+      "url": "https://fsinfo.fim.uni-passau.de/finances/generate-request.php"
+    },
     {
       "id": "ceus-lokal",
       "title": "CEUS Lokal",
