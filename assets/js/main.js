@@ -120,8 +120,8 @@ function buildLinks(links) {
                 a.appendChild(div);
                 li.appendChild(a);
                 li.style.display = isDisabled(c, link.id) ? "none" : "";
-                updateCategory(category.parentElement);
                 category.appendChild(li);
+                updateCategory(category.parentElement);
                 // Add to settings menu
                 li = document.createElement("li");
                 let checkbox = document.createElement("input");
