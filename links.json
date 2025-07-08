@@ -126,8 +126,15 @@
   ],
   "social": [
     {
+      "id": "social-deck",
+      "title": "Social Board",
+      "icon": "kanban",
+      "description": "Post und Aufgabenverwaltung durch ein Kanban-Board",
+      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/index.php/apps/deck/board/8"
+    },
+    {
       "id": "penpot",
-      "title": "Penpot",
+      "title": "PenPot",
       "icon": "easel3-fill",
       "description": "Desgintool",
       "url": "https://penpot.fsinfo.fim.uni-passau.de"
@@ -138,20 +145,6 @@
       "icon": "pencil",
       "description": "Website anpassen",
       "url": "https://fsinfo.fim.uni-passau.de/admin"
-    },
-    {
-      "id": "yourls",
-      "title": "YOURLS",
-      "icon": "link-45deg",
-      "description": "Kurz-URLs unter fsinfo.uni-passau.de",
-      "url": "https://fsinfo.uni-passau.de/admin"
-    },
-    {
-      "id": "social-deck",
-      "title": "Social Deck",
-      "icon": "kanban",
-      "description": "Aufgabenverwaltung (To-dos)",
-      "url": "https://fsinfo.fim.uni-passau.de/nextcloud/index.php/apps/deck/board/8"
     }
   ],
   "finance": [
