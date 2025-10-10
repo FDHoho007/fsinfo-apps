@@ -71,6 +71,13 @@
       "url": "https://fsinfo.fim.uni-passau.de/prost"
     },
     {
+      "id": "sitzungstool",
+      "title": "Sitzungstool",
+      "icon": "file-earmark-slides",
+      "description": "TO Ansicht, Redeliste und Meme-View",
+      "url": "https://sitzung.fsinfo.fim.uni-passau.de/"
+    },
+    {
       "id": "refund-form",
       "title": "Rückerstattungsformular",
       "icon": "cash-coin",
@@ -97,6 +104,13 @@
       "icon": "signpost-2",
       "description": "Schnell Schilder im FSinfo-Design erstellen",
       "url": "https://fsinfo.fim.uni-passau.de/schildergenerator/fsinfopassau"
+    },
+    {
+      "id": "studienplan",
+      "title": "Studienplan",
+      "icon": "calendar3",
+      "description": "Plane den Ablauf deines Studiums, das dann doch über Regelstudienzeit hinausgeht",
+      "url": "https://fsinfo.fim.uni-passau.de/studienplan/"
     },
     {
       "id": "klausibrowser",
@@ -201,20 +215,6 @@
     }
   ],
   "custom": [
-    {
-      "id": "studienplan",
-      "title": "Studienplan",
-      "icon": "calendar3",
-      "description": "von Fabian Dietrich & Paul Seidel",
-      "url": "https://studienplan.fs-info.de/"
-    },
-    {
-      "id": "sitzungstool",
-      "title": "Sitzungstool",
-      "icon": "file-earmark-slides",
-      "description": "von Fabian Dietrich",
-      "url": "https://sitzung.fs-info.de/"
-    },
     {
       "id": "meme-generator",
       "title": "Meme Generator",
